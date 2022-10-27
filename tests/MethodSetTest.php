@@ -22,7 +22,7 @@ class MethodSetTest extends TestCase
         $response = $methodSet->createMethod($method);
         $this->assertEquals(
             'public function setSomeString( $someString): void { $this->uObject->set(\'someString\', $someString); }',
-            $response
+            $response,
         );
     }
 }
