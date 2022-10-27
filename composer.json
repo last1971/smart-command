@@ -1,0 +1,30 @@
+{
+    "name": "last1971/smart-command",
+    "description": "Implementation of the command pattern with binding",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Last1971\\SmartCommand\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vladimir",
+            "email": "elcopro@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4|^8.0|^8.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "10.0.x-dev",
+        "phpstan/phpstan": "1.9.x-dev"
+    }
+}
