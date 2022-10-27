@@ -6,6 +6,7 @@ use Last1971\SmartCommand\CreatingMethods\MethodGet;
 use Last1971\SmartCommand\CreatingMethods\MethodSet;
 use Last1971\SmartCommand\CreatingMethods\MethodVoid;
 use Last1971\SmartCommand\Interfaces\IClassable;
+use Last1971\SmartCommand\Interfaces\IMethodable;
 use Last1971\SmartCommand\Interfaces\IUObject;
 use ReflectionClass;
 use ReflectionMethod;
@@ -14,7 +15,7 @@ use ReflectionNamedType;
 class DynamicAdapterClass implements IClassable
 {
     /**
-     * @var array
+     * @var IMethodable[]
      */
     private array $methods;
 

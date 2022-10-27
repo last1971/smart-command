@@ -2,18 +2,17 @@
 
 namespace Last1971\SmartCommand\Interfaces;
 
-/** @template T */
 interface IUObject extends IHashable
 {
     /**
      * @param string $key
-     * @return T
+     * @return mixed
      */
     public function get(string $key): mixed;
 
     /**
      * @param string $key
-     * @param T $value
+     * @param mixed $value
      * @return void
      */
     public function set(string $key, mixed $value): void;

@@ -56,6 +56,10 @@ class DynamicAdapterClassTest extends TestCase
         );
     }
 
+    /**
+     * @return void
+     * @throws Exception
+     */
     public function testCreateMethod(): void
     {
         $type = $this->createMock(ReflectionNamedType::class);

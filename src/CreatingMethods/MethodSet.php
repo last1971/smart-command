@@ -39,7 +39,7 @@ class MethodSet implements IMethodable
         $response = "$returnTypeName $$name";
         if ($parameter->isDefaultValueAvailable()) {
             $defaultValue = $parameter->getDefaultValue();
-            $response .= "=$defaultValue";
+            $response .= "=" . $defaultValue;
         }
         return $response;
     }
