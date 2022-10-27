@@ -8,8 +8,7 @@ interface IMethodable
 {
     /**
      * @param ReflectionMethod $method
-     * @param array $args
      * @return string
      */
-    public function createMethod(ReflectionMethod $method, ...$args): string;
+    public function createMethod(ReflectionMethod $method): string;
 }

@@ -12,10 +12,9 @@ class MethodSet implements IMethodable
 
     /**
      * @param ReflectionMethod $method
-     * @param array $args
      * @return string
      */
-    public function createMethod(ReflectionMethod $method, ...$args): string
+    public function createMethod(ReflectionMethod $method): string
     {
         $methodName = $method->getName();
         $name = lcfirst(substr($methodName, 3));
