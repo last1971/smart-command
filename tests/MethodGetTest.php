@@ -40,7 +40,7 @@ class MethodGetTest extends TestCase
         $method->method('getReturnType')->willReturn($type);
         $result = $this->methodGet->createMethod($method);
         $this->assertEquals(
-            "public function getThis(): string{ return \$this->uObject->get('This'); }",
+            "public function getThis(): string{ return \$this->uObject->get('this'); }",
             $result
         );
     }

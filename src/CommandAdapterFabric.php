@@ -21,9 +21,6 @@ class CommandAdapterFabric
     public static function create(string $interface, IUObject $object, IClassable $classable = null): mixed
     {
         $classable = $classable ?? new DynamicAdapterClass();
-        if (!class_exists($interface)) {
-            throw new Exception($interface . ' was not announced.');
-        }
         $reflectionClass = new ReflectionClass($interface);
         $adapterName = $classable->getClassName($reflectionClass);
         if (!class_exists($adapterName)) {

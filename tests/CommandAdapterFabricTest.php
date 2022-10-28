@@ -18,7 +18,8 @@ class CommandAdapterFabricTest extends TestCase
         $uObject = new UObject(['someValue' => 2.2]);
         /** @var TestInterface $adapter */
         $adapter = CommandAdapterFabric::create(TestInterface::class, $uObject);
-        $this->assertEquals(2.2, $adapter->getSomeValue());
+        $v = $adapter->getSomeValue();
+        $this->assertEquals(2.2, $v);
         $adapter->setSomeValue(1.1);
         $this->assertEquals(1.1, $adapter->getSomeValue());
     }

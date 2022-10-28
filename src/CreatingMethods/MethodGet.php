@@ -17,11 +17,11 @@ class MethodGet implements IMethodable
     public function createMethod(ReflectionMethod $method): string
     {
         $methodName = $method->getName();
-        $name = substr($methodName, 3);
+        $name = lcfirst(substr($methodName, 3));
         $returnType = $method->getReturnType();
         $returnTypeName = $returnType instanceof ReflectionNamedType ? $returnType->getName() : '';
         $response = "public function $methodName(): $returnTypeName";
-        $response .= $name === 'This' && $returnTypeName === IUObject::class
+        $response .= $name === 'this' && $returnTypeName === IUObject::class
             ? "{ return \$this->uObject; }"
             : "{ return \$this->uObject->get('$name'); }";
         return $response;

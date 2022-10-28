@@ -3,7 +3,6 @@
 namespace Last1971\SmartCommand\Traits;
 
 use Last1971\SmartCommand\CommandAdapterFabric;
-use Last1971\SmartCommand\Interfaces\ICommand;
 use Last1971\SmartCommand\Interfaces\IUObject;
 use ReflectionClass;
 use ReflectionException;
