@@ -1,3 +1,5 @@
 This library implements "command pattern" with binding
 
-#Install
+#Install 
+
+composer require last1971/smart-command
