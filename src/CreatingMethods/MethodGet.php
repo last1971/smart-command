@@ -18,8 +18,8 @@ class MethodGet implements IMethodable
     {
         $methodName = $method->getName();
         $name = lcfirst(substr($methodName, 3));
-        $returnType = $method->getReturnType();
-        $returnTypeName = $returnType instanceof ReflectionNamedType ? $returnType->getName() : '';
+        $getType = new GetType();
+        $returnTypeName = $getType->getType($method->getReturnType());
         $response = "public function $methodName(): $returnTypeName";
         $response .= $name === 'this' && $returnTypeName === IUObject::class
             ? "{ return \$this->uObject; }"

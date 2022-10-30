@@ -35,12 +35,12 @@ class MethodGetTest extends TestCase
     {
         $method = $this->createMock(ReflectionMethod::class);
         $type = $this->createMock(ReflectionNamedType::class);
-        $type->method('getName')->willReturn('string');
+        $type->method('getName')->willReturn('?string');
         $method->method('getName')->willReturn('getThis');
         $method->method('getReturnType')->willReturn($type);
         $result = $this->methodGet->createMethod($method);
         $this->assertEquals(
-            "public function getThis(): string{ return \$this->uObject->get('this'); }",
+            "public function getThis(): ?string{ return \$this->uObject->get('this'); }",
             $result
         );
     }

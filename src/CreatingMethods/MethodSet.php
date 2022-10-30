@@ -33,8 +33,8 @@ class MethodSet implements IMethodable
      */
     private function createParameter(ReflectionParameter $parameter): string
     {
-        $type = $parameter->getType();
-        $returnTypeName = $type instanceof ReflectionNamedType ? $type->getName() : '';
+        $getType = new GetType();
+        $returnTypeName = $getType->getType($parameter->getType());
         $name = $parameter->getName();
         $response = "$returnTypeName $$name";
         if ($parameter->isDefaultValueAvailable()) {
